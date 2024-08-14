@@ -31,6 +31,7 @@ alias i='npm install'
 alias ui='npm uninstall'
 alias dev='npm run dev'
 alias build='npm run build'
+alias nr='npm run'
 alias serve='python3 -m http.server --bind 127.0.0.1 8173'
 
 alias pretty?='npx pretty-quick --check'

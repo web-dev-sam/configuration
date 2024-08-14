@@ -29,6 +29,7 @@ i:         npm install
 ui:        npm uninstall
 dev:       npm run dev
 build:     npm run build
+nr:        npm run
 serve:     Start a local server
 pretty?:   Check if the code is pretty
 pretty!:   Make the code pretty
