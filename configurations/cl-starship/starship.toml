@@ -1,33 +1,10 @@
-[username]
-disabled = false
-
-[hostname]
-disabled = false
+format = """$directory $git_branch"""
+add_newline = true
 
 [directory]
 disabled = false
+format = '[$path](bold purple)'
 
 [git_branch]
 disabled = false
-
-[nodejs]
-disabled = false
-format = '\[[$symbol($version)]($style)\]'
-
-[memory_usage]
-disabled = true
-
-[shell]
-disabled = true
-
-[cmd_duration]
-min_time = 10
-show_milliseconds = true
-disabled = false
-format = ' \[[$duration]($style)\]'
-show_notifications = true
-min_time_to_notify = 60_000
-
-[python]
-disabled = false
-format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+ignore_branches = ["main", "master"]
