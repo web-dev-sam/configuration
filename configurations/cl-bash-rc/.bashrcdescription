@@ -1,0 +1,40 @@
+?:     ❓ Show Help
+??:    🖊️ Edit Help
+!:     🖊️ Edit RC
+c:     🧹 Clean
+
+..:    Back 1
+..1:   Back 1
+..2:   Back 2
+..3:   Back 3
+..l:   Back 1 and list
+..1l:  Back 1 and list
+..2l:  Back 2 and list
+..3l:  Back 3 and list
+l:     List
+lt:    List (Size)
+desk:  Desktop
+doch:  Runs the last command with sudo 😡
+
+g:     Git
+gs:    Git status
+gf:    Git fetch
+gp:    Git pull
+gb:    Git branch
+gcm:   Git checkout main
+gl:    Git log
+
+ts:        Run my beloved Bun 🫦
+i:         npm install
+ui:        npm uninstall
+dev:       npm run dev
+build:     npm run build
+serve:     Start a local server
+pretty?:   Check if the code is pretty
+pretty!:   Make the code pretty
+mit:       Generate a MIT license
+newer:     Check for newer dependencies
+types:     Install all types of deps
+gen:       Create a project
+killnode:  Search & Delete all node_modules
+banger:    Run a banger 🎉

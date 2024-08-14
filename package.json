@@ -1,0 +1,15 @@
+{
+  "name": "configuration",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "update": "bun src/updater.ts"
+  },
+  "keywords": [],
+  "author": "Samuel Braun",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.3.0"
+  }
+}
