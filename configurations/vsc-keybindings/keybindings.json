@@ -26,4 +26,13 @@
 		"command": "workbench.view.extensions",
 		"when": "viewContainer.workbench.view.extensions.enabled"
 	},
+	{
+		"key": "alt+t",
+		"command": "workbench.action.terminal.focusTabs"
+	},
+	{
+		"key": "alt+g",
+		"command": "workbench.view.scm",
+		"when": "workbench.scm.active"
+	},
 ]
