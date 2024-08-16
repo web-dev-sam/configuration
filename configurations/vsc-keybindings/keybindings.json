@@ -35,4 +35,8 @@
 		"command": "workbench.view.scm",
 		"when": "workbench.scm.active"
 	},
+	{
+		"key": "alt+n",
+		"command": "npm.focus"
+	},
 ]
