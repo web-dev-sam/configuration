@@ -1,0 +1,42 @@
+[
+	{
+		"key": "ctrl+r",
+		"command": "workbench.action.tasks.runTask"
+	},
+	{
+		"key": "alt+w",
+		"command": "workbench.action.pinEditor",
+		"when": "!activeEditorIsPinned"
+	},
+	{
+		"key": "alt+w",
+		"command": "workbench.action.unpinEditor",
+		"when": "activeEditorIsPinned"
+	},
+	{
+		"key": "alt+1",
+		"command": "workbench.action.togglePanel"
+	},
+	{
+		"key": "alt+2",
+		"command": "workbench.action.toggleAuxiliaryBar"
+	},
+	{
+		"key": "alt+e",
+		"command": "workbench.view.extensions",
+		"when": "viewContainer.workbench.view.extensions.enabled"
+	},
+	{
+		"key": "alt+t",
+		"command": "workbench.action.terminal.focusTabs"
+	},
+	{
+		"key": "alt+g",
+		"command": "workbench.view.scm",
+		"when": "workbench.scm.active"
+	},
+	{
+		"key": "alt+n",
+		"command": "npm.focus"
+	},
+]
