@@ -39,4 +39,8 @@
 		"key": "alt+n",
 		"command": "npm.focus"
 	},
+	{
+		"key": "alt+a",
+		"command": "editor.emmet.action.wrapWithAbbreviation"
+	},
 ]

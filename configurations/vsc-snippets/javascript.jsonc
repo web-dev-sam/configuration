@@ -146,13 +146,13 @@
 		"description": "Set Timeout"
 	},
 	"Frappe: Frappe Call Doc": {
-		"prefix": "frcd",
+		"prefix": "fcall-frm",
 		"body": [
 			"cur_frm.call({",
 			"  args: {",
 			"    $3",
 			"  },",
-			"  callback: () => {},",
+			"  callback: ({ message }) => {},",
 			"  doc: cur_frm.doc,",
 			"  method: \"$1\",",
 			"  type: \"$2\",",
@@ -160,13 +160,13 @@
 		]
 	},
 	"Frappe: Frappe Call": {
-		"prefix": "frc",
+		"prefix": "fcall",
 		"body": [
 			"frappe.call({",
 			"  args: {",
 			"    $3",
 			"  },",
-			"  callback: () => {},",
+			"  callback: ({ message }) => {},",
 			"  method: \"$1\",",
 			"  type: \"$2\",",
 			"});$0"
@@ -176,6 +176,12 @@
 		"prefix": "flink",
 		"body": [
 			"frappe.utils.get_form_link(${1:doctype}, ${2:docname})$0"
+		]
+	},
+	"Frappe: Time": {
+		"prefix": "ftime",
+		"body": [
+			"frappe.datetime.convert_to_user_tz($1):$0"
 		]
 	}
 }

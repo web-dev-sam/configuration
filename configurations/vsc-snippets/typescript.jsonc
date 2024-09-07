@@ -145,14 +145,179 @@
 		],
 		"description": "Set Timeout"
 	},
+	"Webry: defineProps": {
+		"prefix": "v_props",
+		"body": [
+			"const props = defineProps<{",
+			"  ${1:propName}: ${2:propType}",
+			"  ${0}",
+			"}>()"
+		],
+		"description": "Vue 3 defineProps with TypeScript"
+	},
+	"Webry: withDefaults(defineProps)": {
+		"prefix": "v_props-withdefault",
+		"body": [
+			"const props = withDefaults(defineProps<{",
+			"  ${1:propName}: ${2:propType}",
+			"  ${3}",
+			"}>(), {",
+			"  ${1:propName}: ${4:defaultValue}",
+			"  ${0}",
+			"})"
+		],
+		"description": "Vue 3 defineProps with TypeScript and default values"
+	},
+	"Webry: defineEmits with args": {
+		"prefix": "v_emits",
+		"body": [
+			"const emit = defineEmits<{",
+			"  (e: '${1:eventName}', ${2:arg}: ${3:argType}): void",
+			"  ${0}",
+			"}>()"
+		],
+		"description": "Vue 3 defineEmits with TypeScript and event arguments"
+	},
+	"Shadcn Table Import": {
+		"prefix": "cn_table",
+		"body": [
+			"import {",
+			"  Table,",
+			"  TableBody,",
+			"  TableCaption,",
+			"  TableCell,",
+			"  TableHead,",
+			"  TableHeader,",
+			"  TableRow,",
+			"} from '@/components/ui/table';"
+		],
+		"description": "Import Shadcn Table Components"
+	},
+	"Shadcn Tooltip Import": {
+		"prefix": "cn_tooltip",
+		"body": [
+			"import { Button } from '@/components/ui/button'",
+			"import {",
+			"  Tooltip,",
+			"  TooltipContent,",
+			"  TooltipProvider,",
+			"  TooltipTrigger,",
+			"} from '@/components/ui/tooltip'"
+		],
+		"description": "Import Shadcn Tooltip Components"
+	},
+	"Shadcn Tabs Import": {
+		"prefix": "cn_tabs",
+		"body": [
+			"import { Button } from '@/components/ui/button'",
+			"import {",
+			"  Card,",
+			"  CardContent,",
+			"  CardDescription,",
+			"  CardFooter,",
+			"  CardHeader,",
+			"  CardTitle,",
+			"} from '@/components/ui/card'",
+			"import {",
+			"  Tabs,",
+			"  TabsContent,",
+			"  TabsList,",
+			"  TabsTrigger,",
+			"} from '@/components/ui/tabs'"
+		],
+		"description": "Import Shadcn Tabs Components"
+	},
+	"Shadcn Card Import": {
+		"prefix": "cn_card",
+		"body": [
+			"import {",
+			"  Card,",
+			"  CardContent,",
+			"  CardDescription,",
+			"  CardFooter,",
+			"  CardHeader,",
+			"  CardTitle,",
+			"} from '@/components/ui/card'"
+		],
+		"description": "Import Shadcn Card Components"
+	},
+	"Shadcn Select Import": {
+		"prefix": "cn_select",
+		"body": [
+			"import {",
+			"  Select,",
+			"  SelectContent,",
+			"  SelectGroup,",
+			"  SelectItem,",
+			"  SelectLabel,",
+			"  SelectTrigger,",
+			"  SelectValue,",
+			"} from '@/components/ui/select'"
+		],
+		"description": "Import Shadcn Select Components"
+	},
+	"Shadcn Radio Group Import": {
+		"prefix": "cn_radios",
+		"body": [
+			"import { Label } from '@/components/ui/label'",
+			"import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'"
+		],
+		"description": "Import Shadcn Radio Group Components"
+	},
+	"Shadcn Badge Import": {
+		"prefix": "cn_badge",
+		"body": [
+			"import { Badge } from '@/components/ui/badge'"
+		],
+		"description": "Import Shadcn Badge Component"
+	},
+	"Shadcn Checkbox Import": {
+		"prefix": "cn_checkbox",
+		"body": [
+			"import { Checkbox } from '@/components/ui/checkbox'"
+		],
+		"description": "Import Shadcn Checkbox Component"
+	},
+	"Shadcn Combobox Import and Setup": {
+		"prefix": "cn_combobox",
+		"body": [
+			"import { Check, ChevronsUpDown } from 'lucide-vue-next'",
+			"",
+			"import { cn } from '@/utils'",
+			"import { Button } from '@/components/ui/button'",
+			"import {",
+			"  Command,",
+			"  CommandEmpty,",
+			"  CommandGroup,",
+			"  CommandInput,",
+			"  CommandItem,",
+			"  CommandList,",
+			"} from '@/components/ui/command'",
+			"import {",
+			"  Popover,",
+			"  PopoverContent,",
+			"  PopoverTrigger,",
+			"} from '@/components/ui/popover'",
+			"",
+			"const ${1:items} = [",
+			"  { value: '${2:item1}', label: '${3:Item 1}' },",
+			"  { value: '${4:item2}', label: '${5:Item 2}' },",
+			"  ${0}",
+			"]",
+			"",
+			"const open = ref(false)",
+			"const value = ref('')"
+		],
+		"description": "Import and Setup for Shadcn Combobox Component"
+	},
 	"Frappe: Frappe Call Doc": {
-		"prefix": "frcd",
+		"prefix": "fcall-frm",
 		"body": [
 			"cur_frm.call({",
 			"  args: {",
 			"    $3",
 			"  },",
-			"  callback: () => {},",
+			"  callback: ({ message }) => {},",
 			"  doc: cur_frm.doc,",
 			"  method: \"$1\",",
 			"  type: \"$2\",",
@@ -160,13 +325,13 @@
 		]
 	},
 	"Frappe: Frappe Call": {
-		"prefix": "frc",
+		"prefix": "fcall",
 		"body": [
 			"frappe.call({",
 			"  args: {",
 			"    $3",
 			"  },",
-			"  callback: () => {},",
+			"  callback: ({ message }) => {},",
 			"  method: \"$1\",",
 			"  type: \"$2\",",
 			"});$0"
@@ -176,6 +341,12 @@
 		"prefix": "flink",
 		"body": [
 			"frappe.utils.get_form_link(${1:doctype}, ${2:docname})$0"
+		]
+	},
+	"Frappe: Time": {
+		"prefix": "ftime",
+		"body": [
+			"frappe.datetime.convert_to_user_tz($1):$0"
 		]
 	}
 }
