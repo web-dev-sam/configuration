@@ -23,8 +23,29 @@ alias gs='git status'
 alias gf='git fetch --all'
 alias gp='git pull'
 alias gb='git branch -a'
-alias gcm='git checkout main'
+alias gm='git checkout $(git remote show $(git remote | head -n1) | sed -n "s/.*HEAD branch: //p")'
 alias gl='git log --oneline --graph'
+function gc() {
+    git fetch --all --prune
+    git branch --format '%(refname:short) %(upstream:track)' | awk '/\[gone\]/{print $1}' | xargs git branch -D
+}
+alias gg='gm && gp && gc'
+function get() {
+    if [ -z "$1" ] || [ -z "$2" ]; then
+        echo "Error: Both arguments are required"
+        echo "Usage: get <template-name> <target-folder>"
+        return 1
+    fi
+
+    npx giget@latest "gh:web-dev-sam/templates/$1" "$2"
+    
+    # Check if folder is completely empty
+    if [ -z "$(ls -A "$2" 2>/dev/null)" ]; then
+        rm -rf "$2"
+        echo "Error: Template '$1' doesn't exist in gh:web-dev-sam/templates/"
+        return 1
+    fi
+}
 
 alias ts='bun'
 alias i='npm install'
